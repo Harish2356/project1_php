@@ -89,3 +89,39 @@
 -->
 </div>
 </html>
+
+<?php
+                    echo "<br>";
+					if(!empty($_SESSION["bookid"]) && !empty($_SESSION["bookname"]) && !empty($_SESSION["bookprice"]))
+					{
+						$total = 0;
+						
+						//foreach($_SESSION["shopping_cart"] as $keys => $values)
+						//{
+                            //if(($values["stock"]-$values["quantity"])<1 ){
+                               //$values["quantity"]=0;
+                                //echo '<script>alert("Please select the quantity of books less than or eqale to stock")</script>';
+                                //echo'<script>window.location="order.php"</script>';
+                                //exit();
+                            //}
+                            //else{
+					?>
+        <tr>
+                        <td><?php echo $_SESSION["bookid"]; ?></td>
+                        <td><?php echo $_SESSION["bookname"]; ?></td>
+                        <td><?php echo $_SESSION["bookprice"]; ?></td>
+                        <!-- <td><?php echo $t=($product_array["quantity"] * $product_array["bookprice"]); ?></td> -->
+                        <td><a href="order.php?action=delete&bookid=<?php echo $product_array["bookid"]; ?>">Remove</a> </td>
+                    </tr>
+                    <br>
+                    <?php
+								// $total =  $_SESSION["bookprice"];
+						}
+					?>
+                    <tr>
+                        <!-- <td>Total</td> -->
+                    <!-- <td>$ <?php echo $_SESSION["bookprice"]; ?></td> -->
+
+
+
+                    </tr>
